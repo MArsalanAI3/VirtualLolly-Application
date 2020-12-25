@@ -11,7 +11,7 @@ export default function LollyPage(lolly) {
       <h5 className="sharableLinkContainer">Your sharable link: </h5>{" "}
       <span className="sharableLink">
         {" "}
-        {`https://pedantic-williams-05140f.netlify.app${location.pathname}/`}
+        {`https://virtuallolly-by-marsalan.netlify.app${location.pathname}/`}
       </span>
       <div className="recievedContentContainer">
         <Lolly
