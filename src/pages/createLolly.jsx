@@ -201,6 +201,8 @@ const CreateLolly = () => {
                 <ErrorMessage name="from" component={ErrorMsg} />
 
                 <Button
+                fullWidth
+                type="submit"
 
 
                 >
