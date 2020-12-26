@@ -9,7 +9,7 @@ import * as Yup from "yup";
 import shortId from "shortid";
 import {navigate} from 'gatsby'
 import ErrorMsg from "../Utils/ErrorMsg";
-
+import "../assets/style.css";
 
 
 // export const GET_LOLLY_BY_SLUG = gql`
@@ -146,17 +146,22 @@ const CreateLolly = () => {
         
       </div>
       <div >
-        <Paper style={{
+        <Paper elevation={4} style={{
               width: "400px",
               margin: "0 auto",
+              color:"white",
               padding: "30px 0px ",
-            }}>
+              backgroundColor: "#2d3748",
+              border: "4px solid #fa73d9"
+
+           
+           }}>
         <Formik
               initialValues={initialValues}
               onSubmit={onSubmit}
               validationSchema={validationSchema}
             >
-              <Form style={{padding: "14px"}}>
+              <Form style={{padding: "14px",color:"white "}}>
                 <Field
                   as={TextField}
                   id="To"
@@ -165,7 +170,7 @@ const CreateLolly = () => {
                   variant="outlined"
                   name="to"
                   fullWidth
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "10px",backgroundColor: "rgba(0,0,0,.2)"             }}
                 />
                 <ErrorMessage name="to" component={ErrorMsg} />
 
@@ -179,7 +184,7 @@ const CreateLolly = () => {
                   fullWidth
                   variant="outlined"
                   name="message"
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "10px",backgroundColor: "rgba(0,0,0,.2)" }}
                 />
                 <ErrorMessage name="message" component={ErrorMsg} />
 
@@ -191,16 +196,13 @@ const CreateLolly = () => {
                   label="Your Name"
                   variant="outlined"
                   fullWidth
-                  style={{ marginTop: "10px" }}
+                  style={{ marginTop: "10px",backgroundColor: "rgba(0,0,0,.2)  "   }}
                 />
                 <ErrorMessage name="from" component={ErrorMsg} />
 
                 <Button
-                  variant="contained"
-                  color="secondary"
-                  fullWidth
-                  type="submit"
-                  style={{ marginTop: "10px" }}
+
+
                 >
                   SEND YOUR VIRTUAL LOLLY
                 </Button>
