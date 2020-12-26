@@ -66,7 +66,7 @@ const CreateLolly = () => {
   const [fillLollyMiddle, setfillLollyMiddle] = React.useState("#e95946");
   const [fillLollyBottom, setfillLollyBottom] = React.useState("#deaa43");
 
-  const [createLolly] = useMutation(CREATE_LOLLY_MUTATION);
+  const [createLolly,{ loading }] = useMutation(CREATE_LOLLY_MUTATION);
   // const { data, error, loading } = useQuery(GET_LOLLY_BY_SLUG);
 
  const onSubmit = async (values, actions) => {
@@ -93,7 +93,7 @@ const CreateLolly = () => {
 
   await navigate(`/lolly/${result.data?.craeteLolly?.slug}`);
 
-  // await navigate(`/lolly/${slug}`);
+  await navigate(`/lolly/${slug}`);
 };
 
   return (
@@ -166,7 +166,7 @@ const CreateLolly = () => {
               onSubmit={onSubmit}
               validationSchema={validationSchema}
             >
-              <Form style={{padding: "14px",color:"white "}}>
+              <Form style={{padding: "14px"}}>
                 <Field
                   as={TextField}
                   id="To"
@@ -175,7 +175,7 @@ const CreateLolly = () => {
                   variant="outlined"
                   name="to"
                   fullWidth
-                  style={{ marginTop: "10px",backgroundColor: "rgba(0,0,0,.2)"             }}
+                  style={{ marginTop: "10px",backgroundColor: "rgba(0,0,0,.2)"}}
                 />
                 <ErrorMessage name="to" component={ErrorMsg} />
 
@@ -207,11 +207,11 @@ const CreateLolly = () => {
 
                 <Button
                 fullWidth
+                shake={loading ? true : false}
                 type="submit"
-
-
+                disabled={loading ? true : false}
                 >
-                  SEND YOUR VIRTUAL LOLLY
+                {loading ? "Freezing.." : "Freez!"}
                 </Button>
               </Form>
             </Formik>
