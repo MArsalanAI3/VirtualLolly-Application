@@ -43,7 +43,7 @@ body{
           line-height:1;
           font-family: 'Yellowtail', cursive;
           text-decoration: none;
-          text-shadow: 10px 5px 6px whitesmoke !important;
+          text-shadow: 10px 5px 6px aqua !important;
 
         }
         @media (min-width: 740px)

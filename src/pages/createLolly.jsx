@@ -91,8 +91,9 @@ const CreateLolly = () => {
     },
   });
 
+  await navigate(`/lolly/${result.data?.craeteLolly?.slug}`);
 
-  await navigate(`/lolly/${slug}`);
+  // await navigate(`/lolly/${slug}`);
 };
 
   return (
@@ -103,6 +104,8 @@ const CreateLolly = () => {
         width: "100%",
         justifyContent: "space-around",
         alignItems: "center",
+        maxWidth: "1000px",
+        margin: "auto",
         height: "100vh"
       }}
     >
@@ -152,8 +155,10 @@ const CreateLolly = () => {
               color:"white",
               padding: "30px 0px ",
               backgroundColor: "#2d3748",
-              border: "4px solid #fa73d9"
+              border: "4px solid #fa73d9",
+              boxShadow: "10px 0 0 10px aqua "
 
+              
            
            }}>
         <Formik
