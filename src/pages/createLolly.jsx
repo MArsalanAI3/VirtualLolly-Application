@@ -91,7 +91,6 @@ const CreateLolly = () => {
     },
   });
 
-  await navigate(`/lolly/${result.data?.craeteLolly?.slug}`);
 
   await navigate(`/lolly/${slug}`);
 };
